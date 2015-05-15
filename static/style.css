@@ -38,6 +38,40 @@ table.list td.action
 	text-align: center;
 }
 
+table.form
+{
+	background-color: #FFFFFF;
+	border-width: 2px;
+	border-color: #000000;
+	border-style: solid;
+	min-width: 300px;
+}
+table.form th
+{
+	background-color: #454545;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+table.form td
+{
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+}
+table.form td.action
+{
+	text-align: center;
+}
+
+input
+{
+	font-size: 1.2em;
+	background-color: #FFFFCC;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 2px
+}
+
 div
 {
 	background-color: #FFFFFF;
