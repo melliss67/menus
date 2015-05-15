@@ -6,16 +6,14 @@
 </head>
 <body>
 <h2>Delete Menu Item</h2>
-<form>
 <table class="form">
   <tr>
-    <td colspan="2">Delete Item?</td>
+    <th colspan="2">Delete Item?</th>
   </tr>
   <tr>
-    <td class="action"><input type="submit" name="btnDelete" value="delete"></td>
-	<td class="action"><a href="#"><input type="button" name="btnCancel" value="cancel"></a></td>
+    <td class="action"><form name="delete"><input type="submit" name="btnDelete" value="delete"></td></form>
+	<form name="delete" method="GET" action="deleterestaurant.html"><td class="action"><input type="submit" value="cancel"></td></form>
   </tr>
 </table>
-</form>
 </body>
 </html>
