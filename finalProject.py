@@ -32,19 +32,19 @@ def deleteRestaurant(restaurant_id):
 @app.route('/restaurant/<int:restaurant_id>')
 @app.route('/restaurant/<int:restaurant_id>/menu')
 def showMenu(restaurant_id):
-	return 'This page is the menu for restaurant %s' % restaurant_id
+	return render_template('menu.html', restaurant=restaurant, items=items)
 
 @app.route('/restaurant/<int:restaurant_id>/new')
 def newMenuItem(restaurant_id):
-	return 'This page is for making a new menu item for restaurant %s' % restaurant_id
+	return render_template('newmenuitem.html',restaurant=restaurant)
 	
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit')
 def editMenuItem(restaurant_id, menu_id):
-	return 'This page is for editing menu item %s' % menu_id
+	return render_template('editmenuitem.html', restaurant=restaurant,item=item)
 	
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete')
 def deleteMenuItem(restaurant_id, menu_id):
-	return 'This page is for deleting menu item %s' % menu_id
+	return render_template('deletemenuitem.html', restaurant=restaurant,item=item)
 
 if __name__ == '__main__':
 	app.debug = True

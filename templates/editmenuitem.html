@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Edit Menu Item</title>
-<link rel="stylesheet" type="text/css" href="../static/style.css">
+<link rel="stylesheet" type="text/css" href="../../../../static/style.css">
 </head>
 <body>
 <h2>Edit Menu Item</h2>
@@ -12,20 +12,20 @@
   </tr>
   <tr>
     <td>Name:</td>
-	<td><input type="text" name="item_name">
+	<td><input type="text" name="item_name" value="{{ item.name }}">
   </tr>
   <tr>
     <td>Price:</td>
-	<td><input type="text" name="item_price">
+	<td><input type="text" name="item_price" value="{{ item.price }}">
   </tr>
   <tr>
     <td colspan="2">Description:</td>
   </tr>
   <tr>
-	<td colspan="2"><textarea rows="4" cols="40" name="item_description">{text here}</textarea></td>
+	<td colspan="2"><textarea rows="4" cols="40" name="item_description">{{ item.description }}</textarea></td>
   </tr>
   <tr>
-    <td class="action"><form name="edit"><input type="submit" name="btnDelete" value="save"></td></form>
+    <td class="action"><form name="edit"><input type="submit" name="btnSave" value="save"></td></form>
 	<form name="cancel" method="GET" action="#"><td class="action"><input type="submit" value="cancel"></td></form>
   </tr>
 </table>

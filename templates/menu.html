@@ -6,6 +6,27 @@
 </head>
 <body>
 <h2>Menu</h2>
-
+<div class="section">
+<table class="list">
+{% if items|length < 1 %}
+  <tr>
+    <td>No menu items were found.</td>
+  </tr>
+{% else %}
+	{% for item in items %}
+  <tr>
+    <td>{{ item.name }}</td>
+	<td>{{ item.price }}</td>
+	<td class="action"><a href="/restaurant/{{ restaurant.id }}/menu/{{ item.id }}/edit">edit</a></td>
+	<td class="action"><a href="/restaurant/{{ restaurant.id }}/menu/{{ item.id }}/delete">delete</a></td>
+  </tr>
+  <tr>
+    <td colspan="4">item.description</td>
+  </tr>
+	{% endfor %}
+{% endif %}
+</table>
+<a href="/restaurant/{{ restaurant.id }}/new">Add Menu Item</a>
+</div>
 </body>
 </html>
