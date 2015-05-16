@@ -6,19 +6,24 @@
 </head>
 <body>
 <h2>Restaurants</h2>
+{{ restaurants|length }} restaurants found
 <div class="section">
 <table class="list">
+{% if restaurants|length < 1 %}
   <tr>
-    <td>Red Booth Place</td>
-	<td class="action">edit</td>
-	<td class="action">delete</td>
+    <td>No restaurants were found.</td>
   </tr>
+{% else %}
+	{% for restaurant in restaurants %}
   <tr>
-    <td>Quick Mexican</td>
-	<td class="action">edit</td>
-	<td class="action">delete</td>
+    <td>{{ restaurant.name }}</td>
+	<td class="action"><a href="/restaurant/{{ restaurant.id }}/edit">edit</a></td>
+	<td class="action"><a href="/restaurant/{{ restaurant.id }}/delete">delete</a></td>
   </tr>
+	{% endfor %}
+{% endif %}
 </table>
+<a href="/restaurant/new">Add Restaurant</a>
 </div>
 </body>
 </html>
