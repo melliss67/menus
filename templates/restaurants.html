@@ -16,7 +16,7 @@
 {% else %}
 	{% for restaurant in restaurants %}
   <tr>
-    <td>{{ restaurant.name }}</td>
+    <td><a href="restaurant/{{ restaurant.id }}/menu">{{ restaurant.name }}</a></td>
 	<td class="action"><a href="/restaurant/{{ restaurant.id }}/edit">edit</a></td>
 	<td class="action"><a href="/restaurant/{{ restaurant.id }}/delete">delete</a></td>
   </tr>

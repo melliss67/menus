@@ -6,14 +6,15 @@
 </head>
 <body>
 <h2>Edit Restaurant</h2>
+<form name="edit" method="post">
 <table class="form">
   <tr>
     <td>Name:</td>
-	<td><input type="text" name="item_name" value="{{ restaurant.name }}">
+	<td><input type="text" name="name" value="{{ restaurant.name }}">
   </tr>
   <tr>
-    <td class="action"><form name="edit"><input type="submit" name="btnDelete" value="save"></td></form>
-	<form name="cancel" method="GET" action="#"><td class="action"><input type="submit" value="cancel"></td></form>
+    <td class="action"><input type="submit" name="btnSave" value="save"></td></form>
+	<form name="cancel" method="get" action="../../"><td class="action"><input type="submit" value="cancel"></td></form>
   </tr>
 </table>
 </body>
