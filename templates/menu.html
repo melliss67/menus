@@ -21,7 +21,7 @@
 	<td class="action"><a href="/restaurant/{{ restaurant.id }}/menu/{{ item.id }}/delete">delete</a></td>
   </tr>
   <tr>
-    <td colspan="4">item.description</td>
+    <td colspan="4">{{ item.description }}</td>
   </tr>
 	{% endfor %}
 {% endif %}

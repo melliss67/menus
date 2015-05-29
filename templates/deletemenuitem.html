@@ -11,8 +11,8 @@
     <th colspan="2">Delete {{ item.name }}?</th>
   </tr>
   <tr>
-    <td class="action"><form name="delete"><input type="submit" name="btnDelete" value="delete"></td></form>
-	<form name="delete" method="GET" action="deleterestaurant.html"><td class="action"><input type="submit" value="cancel"></td></form>
+    <td class="action"><form name="delete" method="post"><input type="submit" name="btnDelete" value="delete"></td></form>
+	<form name="cancel" method="GET" action="deleterestaurant.html"><td class="action"><input type="submit" value="cancel"></td></form>
   </tr>
 </table>
 </body>
